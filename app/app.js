@@ -11,11 +11,13 @@ app.locals.productName = "The Signal"
 
 app.use(express.static('app/public'));
 
-app.use(require('./routes/index'));
+app.use(require('./routes/home'));
 app.use(require('./routes/about'));
 app.use(require('./routes/contact'));
-app.use(require('./routes/loginpage'));
-app.use(require('./routes/personalpage'));
+app.use(require('./routes/login'));
+app.use(require('./routes/personal'));
+app.use(require('./routes/history'));
+app.use(require('./routes/settings'));
 
 
 var server = app.listen(app.get('port'), function() {
