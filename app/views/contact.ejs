@@ -39,11 +39,82 @@
       <a class="active" href="contact"><i class="fa fa-envelope"></i></a> 
       <a href="login"><i class="fa fa-key"></i></a>
     </div>
+    <style>
+
+form {
+    border: 3px solid #f1f1f1;
+    font-family: Arial;
+}
+
+.container {
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+input[type=text], input[type=submit] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=checkbox] {
+    margin-top: 16px;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+input[type=submit]:hover {
+    opacity: 0.8;
+}
+</style>
+<body>
     
-    <article>
-            <h1>Contact Us</h1>
-            Contact us here:
-            <br>
+<article>
+    <h1>Contact Us</h1>
+
+<form action="/action_page.php">
+  <div class="container">
+    <h2>Any Questions? Send Us an E-Mail</h2>
+    <p>You can send us any questions you have and we will reply back as fast as we can, usually withing 1-2 hours. You can also sign up to our newsletter to get updated on our products, security pacthes and most importantanly special discount offers and compititions.</p>
+  </div>
+
+  <div class="container" style="background-color:white">
+    <input type="text" placeholder="Name" name="name" required>
+    <input type="text" placeholder="Email address" name="mail" required>
+    <input type="text" placeholder="Your Question here" name="question" required>
+    <label>
+      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+    </label>
+  </div>
+
+  <div class="container">
+    <input type="submit" value="Send">
+  </div>
+</form>
+<br><br>
+            <h1>You can also get in contact with us here</h1>
+Security Service &copy;
+<br>
+Elsiagårdsvej 5
+<br>
+DK-4000 Roskilde 
+<br>
+DENMARK
+<br>
+Tel: (+45) 22 44 22 32
+<br>
+On weekdays from 8:00 – 16:00 (4pm) CET.
+<br>
+E-mail: info@stromma.dk
+<br><br><br>
+            <h1>Or follow us on social media here:</h1>
             <i class="fa fa-facebook-official" style="font-size:50px"></i>
             <span>Official Facebook Link: <a href="https://www.facebook.com/profile.php?id=100017021502409">https://www.facebook.com/profile.php?id=100017021502409</a></span>
             <br><br>
@@ -76,10 +147,8 @@
             <br><br>
             <i class="fa fa-twitch" style="font-size:50px"></i>
             <span>Official Twitch Channel: <a href="https://www.twitch.tv/someordinarygamers">https://www.twitch.tv/getouttahere</a></span>
-            <br><br>
-            <br><br>
-            Donate here:
-            <br>
+            <br><br><br>
+            <h1>Feel free to donate here:</h1>
             <i class="fa fa-bitcoin" style="font-size:50px"></i> 35Uyx1DfKX2XEk3niayH1nK6X6boB3hB6N
             <br><br>
             <i class="fa fa-cc-paypal" style="font-size:50px"></i>
