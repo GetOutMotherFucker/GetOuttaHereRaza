@@ -6,8 +6,8 @@ app.set('port', process.env.PORT || 3000 );
 app.set('view engine', 'ejs');
 app.set('views', 'app/views');
 
-app.locals.siteTitle = "The Signal"
-app.locals.productName = "The Signal"
+app.locals.siteTitle = "Security Service.dk"
+app.locals.productName = "Security Service.dk"
 
 app.use(express.static('app/public'));
 
