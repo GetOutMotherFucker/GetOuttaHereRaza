@@ -37,9 +37,19 @@ body {margin:10px;}
         <a href="settings"><i class="fa fa-wrench"></i></a> 
         <a href="/"><i class="fa fa-key"></i></a>
 </div>
+        <h1>History</h1>
+        This is a log of all the times Sensor 1 has been activated.
+<div id="result"></div>
 
-<article>
-        <h1>Full Log Of All Your History</h1>
-</article>
+<script>
+if(typeof(EventSource) !== "undefined") {
+    var source = new EventSource("https://www.facebook.com/messages/t/jenees.gunatheeswaran");
+    source.onmessage = function(event) {
+        document.getElementById("result").innerHTML += event.data + "<br>";
+    };
+} else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events... SO UPGRADE YOUR FUCKING SHIT!";
+}
+</script>
 </body>
 </html>
