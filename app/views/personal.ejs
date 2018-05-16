@@ -42,15 +42,29 @@ body {margin:10px;}
         <h1>This Is Your Personal Page</h1>
         <br>
         <h1>Latest Alerts:</h1>
-        <br>
-        No Alerts
-        <br>
-        <button type="button" onclick="document.getElementById('demo').innerHTML = Date()"> Click here to update.</button>
         <p id="demo"></p>
-        <br>
-        <h1>Sonsor 1:</h1>
-        <br>
+        <script>
+            var myVar = setInterval(myTimer, 420);
+            
+            function myTimer() {
+                var d = new Date();
+                document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+            }
+        </script>
         No Alerts
+        <br><br>
+        <h1>Sonsor 1:</h1>
+        No Alerts
+        <br>
+        <button onclick="myVar = setTimeout(myFunction, 3000); setTimeout(myFunction, 7000); setTimeout(myFunction, 13000); setTimeout(myFunction, 18000)">Activate Sensor 1</button>
+
+        <button onclick="clearTimeout(myVar)">Deactivate Sensor 1</button>
+        
+        <script>
+        function myFunction() {
+            alert("ALERT! Sensor 1 has been activated");
+        }
+        </script>
     </article>
 </body>
 </html>
