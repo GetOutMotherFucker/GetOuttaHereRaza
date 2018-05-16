@@ -1,3 +1,7 @@
+    @{
+    var db = Database.Open("SchoolDB"); 
+    var query = "SELECT * FROM SensorData"; 
+    }
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -51,5 +55,22 @@ if(typeof(EventSource) !== "undefined") {
     document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events... SO UPGRADE YOUR FUCKING SHIT!";
 }
 </script>
+
+
+    <table border="1" width="100%"> 
+    <tr>
+    <th>Id</th> 
+    <th>Tid</th> 
+    <th>SensorNummer</th> 
+    </tr>
+    @foreach(var row in db.Query(query))
+    {
+    <tr> 
+    <td>@row.Id</td> 
+    <td>@row.Tid</td> 
+    <td>@row.SensorNummer</td> 
+    </tr> 
+    }
+    </table> 
 </body>
 </html>
