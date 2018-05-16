@@ -18,6 +18,7 @@ app.use(require('./routes/login'));
 app.use(require('./routes/personal'));
 app.use(require('./routes/history'));
 app.use(require('./routes/settings'));
+app.use(require('./routes/restsignal'));
 
 
 var server = app.listen(app.get('port'), function() {
