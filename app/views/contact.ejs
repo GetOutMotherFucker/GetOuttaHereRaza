@@ -7,21 +7,25 @@
     <style>
 
 form {
-    border: 3px solid #f1f1f1;
+        text-align: center;
 }
 
 .container {
-    padding: 20px;
-    background-color: #f1f1f1;
+    width: 75%;
+    padding: 5px;
+    background-color: #fafaff;
+    border-radius: 5px;
+    margin: auto;
 }
 
 input[type=text], input[type=submit] {
-    width: 100%;
+    width: 75%;
     padding: 12px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    border-radius: 5px;
 }
 
 input[type=checkbox] {
@@ -29,9 +33,11 @@ input[type=checkbox] {
 }
 
 input[type=submit] {
-    background-color: #4CAF50;
+    width: 50%;
+    background-color: #9999ff;
     color: white;
     border: none;
+    border-radius: 5px;
 }
 
 input[type=submit]:hover {
@@ -46,6 +52,7 @@ input[type=submit]:hover {
                 <a href="login"><i class="fa fa-key"></i></a>
               </div>
 <article>
+  
     <h1>Contact Us</h1>
 
 <form action="/action_page.php">
@@ -58,11 +65,10 @@ input[type=submit]:hover {
     <input type="text" placeholder="Name" name="name" required>
     <input type="text" placeholder="Email address" name="mail" required>
     <input type="text" placeholder="Your Question here" name="question" required>
-    <label>
-      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
-    </label>
   </div>
-
+    <label>
+      <input text-align=left type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+    </label>
   <div class="container">
     <input type="submit" value="Send">
   </div>
