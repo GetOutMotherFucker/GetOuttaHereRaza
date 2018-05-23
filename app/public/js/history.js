@@ -1,6 +1,6 @@
 $(function() {
     
-    var output = '<h1>**HISTORY**</h1>';
+    var output = '<h1>History</h1>';
   
     $.ajax({
         type : 'GET', //get metode
@@ -10,31 +10,15 @@ $(function() {
         });
     
     function SensorData(data) {
-         output += '<h1>SensorData</h1>';
+         output += '<h2>SensorData</h2>';
         $.each(data,function(key, item) {
 
-              output += '<h1 style="background-color:DodgerBlue;"> ' + item.ID +'  </h1>';
-              output += '<h1 style="background-color:DodgerBlue;"> ' + item.Tid +'  </h1>';
-              output += '<h1 style="background-color:DodgerBlue;"> ' + item.SensorNumber +'  </h1>'; 
+              output += '<h3> ' + "ID: " + item.ID + '  </h3>';
+              output += '<h3 style="background-color:#ccccff;"> ' + "Tid: " + item.Tid +'  </h3>';
+              output += '<h3 style="background-color:#0000ff;"> ' + "SensorNumber: " + item.SensorNumber +'  </h3>';
+              output += '<h3> ' + "________________________________________________________________________________________________________________________________" + '  </h3>';
         });
         $('.history').html(output);
     }
   
   });
-
-  
-//   <table border="1" width="100%"> 
-//   <tr>
-//   <th>Id</th> 
-//   <th>Tid</th> 
-//   <th>SensorNummer</th> 
-//   </tr>
-//   @foreach(var row in db.Query(query))
-//   {
-//   <tr> 
-//   <td>@row.Id</td> 
-//   <td>@row.Tid</td> 
-//   <td>@row.SensorNummer</td> 
-//   </tr> 
-//   }
-//   </table> 
