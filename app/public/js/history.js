@@ -10,18 +10,13 @@ $(function() {
         });
     
     function SensorData(data) {
-         output += '<h1>I loop</h1>';
+         output += '<h1>SensorData</h1>';
         $.each(data,function(key, item) {
 
               output += '<h1 style="background-color:DodgerBlue;"> ' + item.ID +'  </h1>';
               output += '<h1 style="background-color:DodgerBlue;"> ' + item.Tid +'  </h1>';
               output += '<h1 style="background-color:DodgerBlue;"> ' + item.SensorNumber +'  </h1>'; 
         });
-        $('.history').html(output);
-    }
-    
-    function showFail(data){
-        output += '<h1>I FEJL</h1>';
         $('.history').html(output);
     }
   
